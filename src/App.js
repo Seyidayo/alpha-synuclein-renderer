@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 
-// import Home from "./views/Home";
-// import Dashboard from "./views/Dashboard";
-import FourOhFour from './views/Notfound';
+import Home from "./views/Home/index.js";
+import Dashboard from "./views/Dashboard/index.js";
+import Article from "./components/DashboardComponents/Article";
+import FourOhFour from "./views/Notfound";
 
 class App extends Component {
   render() {
@@ -12,8 +13,9 @@ class App extends Component {
       <React.Fragment>
         <BrowserRouter>
           <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
-            {/* <Route exact path="/dashboard" component={Dashboard} /> */}
+            <Route exact path="/" component={Home} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/dash" component={Article} />
             <Route component={FourOhFour} />
           </Switch>
         </BrowserRouter>

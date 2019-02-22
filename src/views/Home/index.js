@@ -5,7 +5,7 @@ class Home extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <Link />
+        <Link to="/dashboard">Dashboard</Link>
       </React.Fragment>
     );
   }
